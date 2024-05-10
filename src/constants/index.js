@@ -13,8 +13,27 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
+  express,
+  aws,
+  azure,
+  bootstrap,
+  django,
+  flask,
+  java,
+  materialUI,
+  mysql,
+  python,
+  springboot,
+  swift,
+  swiftui,
   docker,
+  cryptoCoins,
+  mapsImg,
+  portfolio,
+  weather,
+  HN,
+  pballal,
+  akash,
   carrent,
   jobit,
   tripguide,
@@ -69,40 +88,48 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
   },
   {
     name: "Node JS",
     icon: nodejs,
   },
   {
+    name: "express",
+    icon: express,
+  },
+  {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "mysql",
+    icon: mysql,
   },
   {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "java",
+    icon: java,
+  },
+  {
+    name: "springboot",
+    icon: springboot,
+  },
+  {
+    name: "python",
+    icon: python,
+  },
+  // {
+  //   name: "flask",
+  //   icon: flask,
+  // },
+  {
+    name: "swift",
+    icon: swift,
   },
   {
     name: "docker",
@@ -111,30 +138,17 @@ const technologies = [
 ];
 
 const experiences = [
-  {
-    title: "Financial Director - Board of Director",
-    company_name: "Rotaract Club of DYPIEMR",
-    icon: Rotaract,
-    iconBg: "#FFFFFF",
-    date: "June 2019 - July 2020",
+    {
+    title: "Graduate Teaching Associate",
+    company_name: "Cal State Fullerton",
+    icon: CSUF,
+    iconBg: "#E6DEDD",
+    date: "August 2023 - May 2024",
     points: [
-      "Our mission is to contribute positively to society by championing impactful causes and serving humanity.",
-      "To guide our members in developing their interpersonal and leadership abilities.",
-      "Grew club from 100 to 250+ members by arranging 15+ events throughout the year, including donating toys to orphaned children and clothes to homeless people.",
-      "Collaborated with motivational speakers to organize a Talk Show for 300+ on-campus attendees.",
-    ],
-  },
-  {
-    title: "Software Engineer - Data Platform Intern",
-    company_name: "Globalshala",
-    icon: globalshala,
-    iconBg: "#FFFFFF",
-    date: "March 2021 - August 2021",
-    points: [
-      "Leveraged Python and SQL to develop automated scripts for data cleaning and preprocessing, effectively slashing manual effort by 50%. This involved writing robust code to handle diverse data formats and sources, ensuring data integrity and accuracy throughout the process.",
-      "Developed a custom analytics platform using React and Node.js for real-time data visualization. The platform enables live insights and interactive visualizations by leveraging React's frontend capabilities and Node.js's backend efficiency.",
-      "Presented detailed analysis and actionable recommendations to stakeholders using Tableau's advanced visualization capabilities. Key findings and insights were effectively communicated through compelling data storytelling and interactive dashboards, enabling stakeholders to make confident, data-driven decisions.",
-     
+      "Instructed 75+ students in Swift via weekly lectures for comprehensive coverage of iOS development.",
+      "Delivered comprehensive lectures on SwiftUI, UIKit, and Cocoa Touch framework, equipping students with practical skills and knowledge essential for iOS development.",
+      "Covered a wide range of topics in class, including MVC and MVVM patterns, CoreData, data persistence, and sessions networking, providing students with a solid foundation in essential iOS development concepts and practices.",
+      "Demonstrated a student-centered approach by addressing individual needs, optimizing office hours to accommodate students' diverse schedules, and effectively resolving their doubts."
     ],
   },
   {
@@ -151,17 +165,30 @@ const experiences = [
       "Contributed to front-end bug fixes, gaining insights into user-centric design principles and the importance of cohesive software components."
     ],
   },
-  {
-    title: "Graduate Teaching Associate",
-    company_name: "Cal State Fullerton",
-    icon: CSUF,
-    iconBg: "#E6DEDD",
-    date: "August 2023 - May 2024",
+    {
+    title: "Software Engineer - Data Platform Intern",
+    company_name: "Globalshala",
+    icon: globalshala,
+    iconBg: "#FFFFFF",
+    date: "March 2021 - August 2021",
     points: [
-      "Instructed 75+ students in Swift via weekly lectures for comprehensive coverage of iOS development.",
-      "Delivered comprehensive lectures on SwiftUI, UIKit, and Cocoa Touch framework, equipping students with practical skills and knowledge essential for iOS development.",
-      "Covered a wide range of topics in class, including MVC and MVVM patterns, CoreData, data persistence, and sessions networking, providing students with a solid foundation in essential iOS development concepts and practices.",
-      "Demonstrated a student-centered approach by addressing individual needs, optimizing office hours to accommodate students' diverse schedules, and effectively resolving their doubts."
+      "Leveraged Python and SQL to develop automated scripts for data cleaning and preprocessing, effectively slashing manual effort by 50%. This involved writing robust code to handle diverse data formats and sources, ensuring data integrity and accuracy throughout the process.",
+      "Developed a custom analytics platform using React and Node.js for real-time data visualization. The platform enables live insights and interactive visualizations by leveraging React's frontend capabilities and Node.js's backend efficiency.",
+      "Presented detailed analysis and actionable recommendations to stakeholders using Tableau's advanced visualization capabilities. Key findings and insights were effectively communicated through compelling data storytelling and interactive dashboards, enabling stakeholders to make confident, data-driven decisions.",
+     
+    ],
+  },
+  {
+    title: "Financial Director - Board of Director",
+    company_name: "Rotaract Club of DYPIEMR",
+    icon: Rotaract,
+    iconBg: "#FFFFFF",
+    date: "June 2019 - July 2020",
+    points: [
+      "Our mission is to contribute positively to society by championing impactful causes and serving humanity.",
+      "To guide our members in developing their interpersonal and leadership abilities.",
+      "Grew club from 100 to 250+ members by arranging 15+ events throughout the year, including donating toys to orphaned children and clothes to homeless people.",
+      "Collaborated with motivational speakers to organize a Talk Show for 300+ on-campus attendees.",
     ],
   },
 ];
@@ -169,93 +196,140 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "I can confidently say that Soham's dedication to their work, coupled with their strong analytical skills and attention to detail make him an exceptional professional. His positive attitude and collaborative nature make him a valuable asset to any team. I highly recommend Soham for his expertise and commitment to excellence.",
+    name: "Prathamesh Ballal",
+    designation: "Software Developer",
+    company: "KPIT",
+    image: pballal,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "I wholeheartedly recommend Soham for his exceptional backend development. His dedication, expertise, and professionalism is truly impressive. Soham consistently approaches every task with enthusiasm and creativity. They are a valuable asset to any team, and I have no doubt they will excel in any endeavor they pursue.",
+    name: "Akash Butala",
+    designation: "Software Engineer",
+    company: "Rocket Companies",
+    image: akash,
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Smart Parking System",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "SPS is a campus parking web app for CSU Fullerton. Users input their destination, and the app finds nearby spots with available spaces across different levels. They can select a spot, pay securely, and plan ahead.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "REST API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MySQL",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Node.JS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Maps API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Stripe API",
+        color: "pink-text-gradient",
+      },
+
+    ],
+    image: mapsImg,
+    source_code_link: "https://github.com/soham7kulkarni/Smart-Parking-System",
+  },
+  {
+    name: "Portfolio",
+    description:
+      "A dynamic portfolio website showcasing my diverse range of projects and skills, providing a comprehensive overview of my expertise and accomplishments in web development and beyond.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Three.JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwind css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/soham7kulkarni/Portfolio",
+  },
+    {
+    name: "Crypto Hunter",
+    description:
+      "Web-based platform that allows users to get detailed information about a wide range of cryptocurrencies, including current prices, market capitalization, trading volume, historical data, and more.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "materia UI",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Chart JS",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: cryptoCoins,
+    source_code_link: "https://github.com/soham7kulkarni/Crypto-hunter",
   },
   {
-    name: "Job IT",
+    name: "ClimaCast",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Stay informed with ClimaCast, your personalized weather companion delivering precise forecasts wherever you go.",
     tags: [
       {
-        name: "react",
+        name: "iOS",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Swift",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "CoreLocation",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: weather,
+    source_code_link: "https://github.com/soham7kulkarni/Clima",
   },
   {
-    name: "Trip Guide",
+    name: "TechTrend",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Your ultimate destination for staying ahead of the curve in the fast-paced world of technology. Explore the latest innovations, trends, and breakthroughs shaping our digital landscape.",
     tags: [
       {
-        name: "nextjs",
+        name: "iOS",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "SwiftUI",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "WebView",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: HN,
+    source_code_link: "https://github.com/soham7kulkarni/Hacker-App",
   },
 ];
 
